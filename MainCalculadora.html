@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-image: url('gigachad.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .calculator {
+      width: 300px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 5px;
+      padding: 0;
+      text-align: center;
+    }
+    .calculator-title {
+      grid-column: 1 / -1;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .calculator button {
+      width: 100%;
+      height: 50px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .calculator button:hover {
+      background-color: #0056b3;
+    }
+    .calculator button:active {
+      background-color: #003f80;
+    }
+    .calculator button.operator {
+      background-color: #28a745;
+    }
+    .calculator button.operator:hover {
+      background-color: #1d9237;
+    }
+    .calculator button.operator:active {
+      background-color: #147528;
+    }
+    .calculator .screen {
+      grid-column: 1 / -1;
+      background-color: #eee;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: right;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="calculator">
+      <div class="calculator-title">SUPER CALCULADORA REBÁSICA</div>
+      <div class="screen" id="screen"></div>
+      <button onclick="playSound('Nope.mp3'); clearScreen()">C</button>
+      <button onclick="playSound('button-click.mp3'); appendNumber('7')">7</button>
+      <button onclick="playSound('button-click.mp3'); appendNumber('8')">8</button>
+      <button onclick="playSound('button-click.mp3'); appendNumber('9')">9</button>
+      <button class="operator" onclick="playSound('button-click.mp3'); appendOperator('+')">+</button>
+      <button onclick="playSound('button-click.mp3'); appendNumber('4')">4</button>
+      <button onclick="playSound('button-click.mp3'); appendNumber('5')">5</button>
+      <button onclick="playSound('button-click.mp3'); appendNumber('6')">6</button>
+      <button class="operator" onclick="playSound('button-click.mp3'); appendOperator('-')">-</button>
+      <button onclick="playSound('button-click.mp3'); appendNumber('1')">1</button>
+      <button onclick="playSound('button-click.mp3'); appendNumber('2')">2</button>
+      <button onclick="playSound('button-click.mp3'); appendNumber('3')">3</button>
+      <button class="operator" onclick="playSound('button-click.mp3'); appendOperator('*')">*</button>
+      <button onclick="playSound('button-click.mp3'); appendNumber('0')">0</button>
+      <button onclick="playSound('button-click.mp3'); appendOperator('.')">.</button>
+      <button class="operator" onclick="playSound('mondongo.mp3'); calculate()">=</button>
+      <button class="operator" onclick="playSound('button-click.mp3'); appendOperator('/')">/</button>
+    </div>
+  </div>
+
+  <script>
+    let screen = document.getElementById('screen');
+    let expression = '';
+
+    function appendNumber(number) {
+      expression += number;
+      screen.textContent = expression;
+    }
+
+    function appendOperator(operator) {
+      expression += operator;
+      screen.textContent = expression;
+    }
+
+    function calculate() {
+      try {
+        expression = eval(expression);
+        screen.textContent = expression;
+      } catch (error) {
+        screen.textContent = 'Error';
+      }
+    }
+
+    function clearScreen() {
+      expression = '';
+      screen.textContent = '';
+    }
+
+    function playSound(soundFile) {
+      const audio = new Audio(soundFile);
+      audio.play();
+    }
+  </script>
+</body>
+</html>
+
