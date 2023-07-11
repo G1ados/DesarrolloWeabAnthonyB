@@ -39,9 +39,11 @@ Los métodos get para obtener todos los datos y para buscar por id están hechos
 para pasrar argumentos por el navegador.
 Los métodos post, put, delete están hechos para obtener por postman mediante body json
 
-Metodo post:
+Metodo POST:
 http://localhost/ci4/nuevoArtista
+Metodo PUT
 http://localhost/ci4/actualizarArtista
+Metodo DELETE
 http://localhost/ci4/eliminarArtista
 
 
