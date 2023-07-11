@@ -1,0 +1,63 @@
+Bermudez Chavez Anthony
+
+Crear base de datos
+
+
+
+
+
+CREATE TABLE datosArtista(
+	id varchar(10) PRIMARY KEY,
+	Artista varchar(100),
+	tecnicaDibujo varchar(150),
+	tecnicaPintura varchar(150),
+	Estilo varchar(50)
+	
+
+);
+
+INSERT INTO datosArtista(id, Artista, tecnicaDibujo, tecnicaPintura, Estilo)
+VALUES(
+	1,
+	'Caspar David Friedrich',
+	'Lápiz grafito, tinta',
+	'Óleo',
+	'Impresionismo'
+
+	
+),
+(
+	4,
+	'Pablo Picasso',
+	'Lápiz grafito, Carbón vegetal',
+	'Öleo',
+	'Cubismo'
+);
+
+
+Los métodos get para obtener todos los datos y para buscar por id están hechos
+para pasrar argumentos por el navegador.
+Los métodos post, put, delete están hechos para obtener por postman mediante body json
+
+Metodo post:
+http://localhost/ci4/nuevoArtista
+http://localhost/ci4/actualizarArtista
+http://localhost/ci4/eliminarArtista
+
+
+
+{
+    "id": 2,
+    "artista": "Frida Kahlo",
+    "tecnicadibujo": "Lapiz grafito, Sanguina",
+	"tecnicapintura": "Oleo, Acrylico",
+    "estilo": "Surrealismo",
+}
+
+{
+    "id": 4,
+    "artista": "Pablo Ruiz Piccaso",
+    "tecnicadibujo": "Lapiz grafito, Sanguina",
+	"tecnicapintura": "Oleo, Acrylico",
+    "estilo": "Surrealismo",
+}

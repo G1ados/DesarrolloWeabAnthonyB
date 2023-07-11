@@ -1,0 +1,1024 @@
+CRITICAL - 2023-07-10 01:05:33 --> syntax error, unexpected token ","
+in APPPATH\Controllers\Home.php on line 43.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-10 01:07:26 --> CodeIgniter\HTTP\Response::setJSON(): Argument #2 ($unencoded) must be of type bool, array given, called in C:\xampp\htdocs\ci4\app\Controllers\Home.php on line 229
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 246.
+ 1 APPPATH\Controllers\Home.php(229): CodeIgniter\HTTP\Response->setJSON([...], [...], [...], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->arte()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-10 02:08:34 --> Undefined variable $datosArte
+in APPPATH\Controllers\Home.php on line 51.
+ 1 APPPATH\Controllers\Home.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosArte', 'C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Home.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->arte()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 05:02:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 05:02:23 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432? in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.2....')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 05:02:23 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432?
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 05:04:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('094237777')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 05:04:49 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432? in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.2....')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('094237777')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 05:04:49 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432?
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'094237777\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('094237777')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 05:05:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('094237777')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 05:05:54 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432? in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.2....')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('094237777')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 05:05:54 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432?
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'094237777\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('094237777')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 05:06:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('094236377')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 05:06:37 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432? in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.2....')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('094236377')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 05:06:37 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432?
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'094236377\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('094236377')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 05:15:46 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('094236377')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 05:16:07 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432? in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.2....')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('094236377')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 05:16:07 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432?
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'094236377\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('094236377')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 05:28:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('0942376377')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 05:28:59 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432? in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.2....')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('0942376377')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 05:28:59 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432?
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'0942376377\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('0942376377')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 05:30:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 05:30:32 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432? in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.2....')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 05:30:32 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432?
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 13:45:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 13:45:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 13:45:33 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432? in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.2....')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 13:45:33 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432?
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 13:45:44 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432? in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.2....')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 13:45:44 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432?
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 13:59:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 13:59:20 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no hay una l�nea en pg_hba.conf para �192.168.100.99�, usuario �postgres�, base de datos �db_sga�, sin cifrado in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.10...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 13:59:20 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no hay una l�nea en pg_hba.conf para �192.168.100.99�, usuario �postgres�, base de datos �db_sga�, sin cifrado
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 14:13:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 14:13:12 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no hay una l�nea en pg_hba.conf para �192.168.100.99�, usuario �postgres�, base de datos �db_sga�, sin cifrado in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.10...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 14:13:12 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no hay una l�nea en pg_hba.conf para �192.168.100.99�, usuario �postgres�, base de datos �db_sga�, sin cifrado
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 14:14:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 14:14:57 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no hay una l�nea en pg_hba.conf para �192.168.100.99�, usuario �postgres�, base de datos �db_sga�, sin cifrado in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.10...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 14:14:58 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no hay una l�nea en pg_hba.conf para �192.168.100.99�, usuario �postgres�, base de datos �db_sga�, sin cifrado
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 14:15:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 14:15:36 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432? in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.2....')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 14:15:36 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432?
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 14:22:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 14:22:32 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432? in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.2....')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 14:22:32 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432?
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 14:22:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 14:23:17 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432? in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.2....')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 14:23:17 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432?
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 14:30:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 14:31:04 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432? in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.2....')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 14:31:04 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432?
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 15:20:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 15:20:46 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432? in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=192.168.2....')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 15:20:46 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host &quot;192.168.2.95&quot; and accepting
+	TCP/IP connections on port 5432?
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 16:31:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 16:31:23 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres� in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=127.0.0.1 ...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 16:31:23 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 16:31:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 16:31:28 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres� in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=127.0.0.1 ...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 16:31:28 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 16:31:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 16:31:30 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres� in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=127.0.0.1 ...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 16:31:30 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 16:31:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 16:31:33 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres� in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(75): pg_connect('host=127.0.0.1 ...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idperson...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 16:31:33 --> Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(69): CodeIgniter\Database\BaseConnection->query('SELECT idpersonal, cedula, apellido1, apellido2, nombres, genero 
+        FROM esq_datos_personales.personal where cedula=\'1316505211\'  ')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->testbd('1316505211')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 16:56:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->artebd('4')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 16:56:41 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la relación «arte»
+LINE 2:         teccnicapintura, estilo FROM arte where id='4'  
+                                             ^ in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'SELECT id, arti...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT id, arti...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id, arti...')
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(83): CodeIgniter\Database\BaseConnection->query('SELECT id, arti...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->artebd('4')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 16:56:41 --> pg_query(): Query failed: ERROR:  no existe la relación «arte»
+LINE 2:         teccnicapintura, estilo FROM arte where id='4'  
+                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la relación «arte»
+LINE 2:         teccnicapintura, estilo FROM arte where id=\'4\'  
+                                             ^', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'SELECT id, artista, tecnicadibujo, 
+        teccnicapintura, estilo FROM arte where id=\'4\'  ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT id, artista, tecnicadibujo, 
+        teccnicapintura, estilo FROM arte where id=\'4\'  ')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id, artista, tecnicadibujo, 
+        teccnicapintura, estilo FROM arte where id=\'4\'  ')
+ 5 APPPATH\Controllers\Home.php(83): CodeIgniter\Database\BaseConnection->query('SELECT id, artista, tecnicadibujo, 
+        teccnicapintura, estilo FROM arte where id=\'4\'  ')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->artebd('4')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 16:58:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->artebd('4')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 16:58:41 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la relación «arte»
+LINE 2:         teccnicapintura, estilo FROM arte where id='4'  
+                                             ^ in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'SELECT artista,...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT artista,...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT artista,...')
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(83): CodeIgniter\Database\BaseConnection->query('SELECT artista,...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->artebd('4')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 16:58:41 --> pg_query(): Query failed: ERROR:  no existe la relación «arte»
+LINE 2:         teccnicapintura, estilo FROM arte where id='4'  
+                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la relación «arte»
+LINE 2:         teccnicapintura, estilo FROM arte where id=\'4\'  
+                                             ^', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'SELECT artista, tecnicadibujo, 
+        teccnicapintura, estilo FROM arte where id=\'4\'  ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT artista, tecnicadibujo, 
+        teccnicapintura, estilo FROM arte where id=\'4\'  ')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT artista, tecnicadibujo, 
+        teccnicapintura, estilo FROM arte where id=\'4\'  ')
+ 5 APPPATH\Controllers\Home.php(83): CodeIgniter\Database\BaseConnection->query('SELECT artista, tecnicadibujo, 
+        teccnicapintura, estilo FROM arte where id=\'4\'  ')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->artebd('4')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 16:59:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->artebd('4')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 16:59:08 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna «teccnicapintura»
+LINE 2:         teccnicapintura, estilo FROM datosArtista where id='...
+                ^
+HINT:  Probablemente quiera hacer referencia a la columna «datosartista.tecnicapintura». in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'SELECT id, arti...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT id, arti...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id, arti...')
+#4 C:\xampp\htdocs\ci4\app\Controllers\Home.php(83): CodeIgniter\Database\BaseConnection->query('SELECT id, arti...')
+#5 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->artebd('4')
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-07-10 16:59:08 --> pg_query(): Query failed: ERROR:  no existe la columna «teccnicapintura»
+LINE 2:         teccnicapintura, estilo FROM datosArtista where id='...
+                ^
+HINT:  Probablemente quiera hacer referencia a la columna «datosartista.tecnicapintura».
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la columna «teccnicapintura»
+LINE 2:         teccnicapintura, estilo FROM datosArtista where id=\'...
+                ^
+HINT:  Probablemente quiera hacer referencia a la columna «datosartista.tecnicapintura».', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'SELECT id, artista, tecnicadibujo, 
+        teccnicapintura, estilo FROM datosArtista where id=\'4\'  ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('SELECT id, artista, tecnicadibujo, 
+        teccnicapintura, estilo FROM datosArtista where id=\'4\'  ')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id, artista, tecnicadibujo, 
+        teccnicapintura, estilo FROM datosArtista where id=\'4\'  ')
+ 5 APPPATH\Controllers\Home.php(83): CodeIgniter\Database\BaseConnection->query('SELECT id, artista, tecnicadibujo, 
+        teccnicapintura, estilo FROM datosArtista where id=\'4\'  ')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->artebd('4')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 17:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->artebd('4')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 17:01:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->artebd('4')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 17:05:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->artebd('4')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-10 20:27:13 --> Declaration of App\Models\RestModel::update($id, $data) must be compatible with CodeIgniter\Model::update($id = null, $data = null): bool
+in APPPATH\Models\Restmodel.php on line 30.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-10 20:34:55 --> Declaration of App\Models\RestModel::update($id, $data) must be compatible with CodeIgniter\Model::update($id = null, $data = null): bool
+in APPPATH\Models\Restmodel.php on line 30.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-10 20:34:59 --> Declaration of App\Models\RestModel::update($id, $data) must be compatible with CodeIgniter\Model::update($id = null, $data = null): bool
+in APPPATH\Models\Restmodel.php on line 30.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+WARNING - 2023-07-10 21:30:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 79.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->buscar('4')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 21:31:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 90.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->verTodo()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2023-07-10 21:32:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$db is deprecated in APPPATH\Controllers\Home.php on line 90.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->verTodo()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-10 22:40:07 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\Home.php on line 134.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-10 22:44:06 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\Home.php on line 134.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-10 22:44:34 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\Home.php on line 134.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-10 22:48:16 --> Unclosed '{' on line 7
+in APPPATH\Controllers\Home.php on line 149.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 23:07:30 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la relación «doatosArtista»
+LINE 1: INSERT INTO &quot;doatosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo...
+                    ^ in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "do...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "do...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "do...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "do...', Array, false)
+#5 C:\xampp\htdocs\ci4\app\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-10 23:07:30 --> pg_query(): Query failed: ERROR:  no existe la relación «doatosArtista»
+LINE 1: INSERT INTO &quot;doatosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo...
+                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la relación «doatosArtista»
+LINE 1: INSERT INTO &quot;doatosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo...
+                    ^', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "doatosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "doatosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "doatosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "doatosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (:id:, :Artista:, :tecnicaDibujo:, :tecnicaPintura:, :Estilo:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 23:08:52 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la relación «datosArtista»
+LINE 1: INSERT INTO &quot;datosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                    ^ in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\xampp\htdocs\ci4\app\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-10 23:08:52 --> pg_query(): Query failed: ERROR:  no existe la relación «datosArtista»
+LINE 1: INSERT INTO &quot;datosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la relación «datosArtista»
+LINE 1: INSERT INTO &quot;datosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                    ^', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (:id:, :Artista:, :tecnicaDibujo:, :tecnicaPintura:, :Estilo:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 23:12:14 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna «Artista» en la relación «datosartista»
+LINE 1: INSERT INTO &quot;datosartista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                                          ^ in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\xampp\htdocs\ci4\app\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-10 23:12:14 --> pg_query(): Query failed: ERROR:  no existe la columna «Artista» en la relación «datosartista»
+LINE 1: INSERT INTO &quot;datosartista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                                          ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la columna «Artista» en la relación «datosartista»
+LINE 1: INSERT INTO &quot;datosartista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                                          ^', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "datosartista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "datosartista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "datosartista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datosartista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (:id:, :Artista:, :tecnicaDibujo:, :tecnicaPintura:, :Estilo:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 23:14:23 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la relación «datosArtista»
+LINE 1: INSERT INTO &quot;datosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                    ^ in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\xampp\htdocs\ci4\app\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-10 23:14:23 --> pg_query(): Query failed: ERROR:  no existe la relación «datosArtista»
+LINE 1: INSERT INTO &quot;datosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la relación «datosArtista»
+LINE 1: INSERT INTO &quot;datosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                    ^', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (:id:, :Artista:, :tecnicaDibujo:, :tecnicaPintura:, :Estilo:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 23:21:40 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la relación «datosArtista»
+LINE 1: INSERT INTO &quot;datosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                    ^ in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\xampp\htdocs\ci4\app\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-10 23:21:40 --> pg_query(): Query failed: ERROR:  no existe la relación «datosArtista»
+LINE 1: INSERT INTO &quot;datosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la relación «datosArtista»
+LINE 1: INSERT INTO &quot;datosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                    ^', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (:id:, :Artista:, :tecnicaDibujo:, :tecnicaPintura:, :Estilo:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-10 23:22:06 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la relación «datosArtista»
+LINE 1: INSERT INTO &quot;datosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                    ^ in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\xampp\htdocs\ci4\app\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-10 23:22:06 --> pg_query(): Query failed: ERROR:  no existe la relación «datosArtista»
+LINE 1: INSERT INTO &quot;datosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la relación «datosArtista»
+LINE 1: INSERT INTO &quot;datosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                    ^', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (:id:, :Artista:, :tecnicaDibujo:, :tecnicaPintura:, :Estilo:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

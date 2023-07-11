@@ -1,0 +1,222 @@
+ERROR - 2023-07-11 00:00:04 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la relación «datosArtista»
+LINE 1: INSERT INTO &quot;datosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                    ^ in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\xampp\htdocs\ci4\app\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-11 00:00:04 --> pg_query(): Query failed: ERROR:  no existe la relación «datosArtista»
+LINE 1: INSERT INTO &quot;datosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la relación «datosArtista»
+LINE 1: INSERT INTO &quot;datosArtista&quot; (&quot;id&quot;, &quot;Artista&quot;, &quot;tecnicaDibujo&quot;...
+                    ^', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datosArtista" ("id", "Artista", "tecnicaDibujo", "tecnicaPintura", "Estilo") VALUES (:id:, :Artista:, :tecnicaDibujo:, :tecnicaPintura:, :Estilo:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-11 00:07:15 --> Undefined variable $artista
+in APPPATH\Controllers\Home.php on line 116.
+ 1 APPPATH\Controllers\Home.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $artista', 'C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Home.php', 116)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-11 00:08:24 --> ErrorException: pg_query(): Query failed: ERROR:  el valor nulo en la columna «id» de la relación «datosartista» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (null, null, null, null, null). in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\xampp\htdocs\ci4\app\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-11 00:08:24 --> pg_query(): Query failed: ERROR:  el valor nulo en la columna «id» de la relación «datosartista» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (null, null, null, null, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  el valor nulo en la columna «id» de la relación «datosartista» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (null, null, null, null, null).', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "datosartista" ("id", "artista", "tecnicadibujo", "tecnicapintura", "estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "datosartista" ("id", "artista", "tecnicadibujo", "tecnicapintura", "estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "datosartista" ("id", "artista", "tecnicadibujo", "tecnicapintura", "estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datosartista" ("id", "artista", "tecnicadibujo", "tecnicapintura", "estilo") VALUES (:id:, :artista:, :tecnicadibujo:, :tecnicapintura:, :estilo:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-11 00:19:08 --> ErrorException: pg_query(): Query failed: ERROR:  el valor nulo en la columna «id» de la relación «datosartista» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (null, null, null, null, null). in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "da...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "da...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "da...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "da...', Array, false)
+#5 C:\xampp\htdocs\ci4\app\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-11 00:19:08 --> pg_query(): Query failed: ERROR:  el valor nulo en la columna «id» de la relación «datosartista» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (null, null, null, null, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  el valor nulo en la columna «id» de la relación «datosartista» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (null, null, null, null, null).', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'INSERT INTO "datosartista" ("id", "artista", "tecnicadibujo", "tecnicapintura", "estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "datosartista" ("id", "artista", "tecnicadibujo", "tecnicapintura", "estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "datosartista" ("id", "artista", "tecnicadibujo", "tecnicapintura", "estilo") VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "datosartista" ("id", "artista", "tecnicadibujo", "tecnicapintura", "estilo") VALUES (:id:, :artista:, :tecnicadibujo:, :tecnicapintura:, :estilo:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(123): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-11 01:17:21 --> Unmatched '}'
+in APPPATH\Controllers\Home.php on line 193.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-11 01:18:22 --> Call to undefined method App\Controllers\Home::failValidationError()
+in APPPATH\Controllers\Home.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-11 01:20:58 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\Home.php on line 97.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-11 01:21:55 --> Call to undefined method App\Controllers\Home::fail()
+in APPPATH\Controllers\Home.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-11 01:23:36 --> Trait "App\Controllers\ResponseTrait" not found
+in APPPATH\Controllers\Home.php on line 6.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-11 01:26:34 --> Class "App\Controllers\ResponseInterface" not found
+in APPPATH\Controllers\Home.php on line 118.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoArtista()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-11 01:53:54 --> syntax error, unexpected token "return"
+in APPPATH\Controllers\Home.php on line 149.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci4\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-11 01:54:21 --> ErrorException: pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2: WHERE &quot;id&quot; = 2
+                   ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'DELETE FROM "da...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('DELETE FROM "da...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "da...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM "da...', Array, false)
+#5 C:\xampp\htdocs\ci4\system\Database\Postgre\Builder.php(236): CodeIgniter\Database\BaseBuilder->delete('', NULL, true)
+#6 C:\xampp\htdocs\ci4\app\Controllers\Home.php(146): CodeIgniter\Database\Postgre\Builder->delete()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->eliminarArtista()
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-11 01:54:21 --> pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2: WHERE &quot;id&quot; = 2
+                   ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2: WHERE &quot;id&quot; = 2
+                   ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'DELETE FROM "datosartista"
+WHERE "id" = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('DELETE FROM "datosartista"
+WHERE "id" = 2')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "datosartista"
+WHERE "id" = 2')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM "datosartista"
+WHERE "id" = :id:', [...], false)
+ 6 SYSTEMPATH\Database\Postgre\Builder.php(236): CodeIgniter\Database\BaseBuilder->delete('', null, true)
+ 7 APPPATH\Controllers\Home.php(146): CodeIgniter\Database\Postgre\Builder->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->eliminarArtista()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-11 01:55:37 --> ErrorException: pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2: WHERE &quot;id&quot; = 2
+                   ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php:152
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\ci4\system\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'DELETE FROM "da...')
+#2 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('DELETE FROM "da...')
+#3 C:\xampp\htdocs\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "da...')
+#4 C:\xampp\htdocs\ci4\system\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM "da...', Array, false)
+#5 C:\xampp\htdocs\ci4\system\Database\Postgre\Builder.php(236): CodeIgniter\Database\BaseBuilder->delete('', NULL, true)
+#6 C:\xampp\htdocs\ci4\app\Controllers\Home.php(148): CodeIgniter\Database\Postgre\Builder->delete()
+#7 C:\xampp\htdocs\ci4\system\CodeIgniter.php(934): App\Controllers\Home->eliminarArtista()
+#8 C:\xampp\htdocs\ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-11 01:55:37 --> pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2: WHERE &quot;id&quot; = 2
+                   ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2: WHERE &quot;id&quot; = 2
+                   ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.', 'C:\\xampp\\htdocs\\ci4\\system\\Database\\Postgre\\Connection.php', 152)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(152): pg_query(Object(PgSql\Connection), 'DELETE FROM "datosartista"
+WHERE "id" = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('DELETE FROM "datosartista"
+WHERE "id" = 2')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "datosartista"
+WHERE "id" = 2')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM "datosartista"
+WHERE "id" = :id:', [...], false)
+ 6 SYSTEMPATH\Database\Postgre\Builder.php(236): CodeIgniter\Database\BaseBuilder->delete('', null, true)
+ 7 APPPATH\Controllers\Home.php(148): CodeIgniter\Database\Postgre\Builder->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->eliminarArtista()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
