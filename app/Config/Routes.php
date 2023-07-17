@@ -29,21 +29,17 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->get('/prueba', 'Home::prueba');
 $routes->get('/api', 'Home::api');
-$routes->get('/login', 'Home::login');
-$routes->get('/testbd/(:any)', 'Home::testbd/$1');
-$routes->get('/buscar/(:any)', 'Home::buscar/$1');
+$routes->get('/buscar', 'Home::buscar');
 $routes->get('/verTodo', 'Home::verTodo');
 $routes->post('/nuevoArtista', 'Home::nuevoArtista');
 $routes->delete('/eliminarArtista', 'Home::eliminarArtista');
 $routes->put('/actualizarArtista', 'Home::actualizarArtista');
-$routes->get('datosartista', 'App\Controllers\DatosArtista::index');
-$routes->post('datosartista', 'App\Controllers\DatosArtista::create');
-$routes->get('datosartista/(:segment)', 'App\Controllers\DatosArtista::show/$1');
-$routes->put('datosartista/(:segment)', 'App\Controllers\DatosArtista::update/$1');
-$routes->delete('datosartista/(:segment)', 'App\Controllers\DatosArtista::delete/$1');
+$routes->get('/CRUD', 'Home::CRUD');
+$routes->post('/CRUD', 'Home::CRUD');
+$routes->put('/CRUD', 'Home::CRUD');
+$routes->delete('/CRUD', 'Home::CRUD');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
@@ -60,3 +56,7 @@ $routes->delete('datosartista/(:segment)', 'App\Controllers\DatosArtista::delete
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
+
+
+
+
